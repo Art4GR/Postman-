@@ -1,0 +1,1646 @@
+{
+	"info": {
+		"_postman_id": "72cf14bb-75a9-4adc-9578-f76be928e09a",
+		"name": "BenchTask",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "LocalAPI",
+			"item": [
+				{
+					"name": "GetUserID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"1"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HeadUserID",
+					"request": {
+						"method": "HEAD",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostUserID Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"Valerik@mail.ru\",\r\n  \"firstName\": \"Valerik\",\r\n  \"id\": 11,\r\n  \"lastName\": \"Last\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/users/createUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"createUser"
+							],
+							"query": [
+								{
+									"key": "\"email\"",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "\"firstNam",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PatchUserID",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"UsePatchMethod\",\r\n  \"firstName\": \"string\",\r\n  \"id\": 1,\r\n  \"lastName\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"1"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DelUserID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/users/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"5"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TraceUserID",
+					"request": {
+						"method": "TRACE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "https://reqres.in/",
+			"item": [
+				{
+					"name": "GET",
+					"item": [
+						{
+							"name": "GET 1",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/users?page=2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET 2",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/users?page=1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET 3",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/users?page=0",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET 4",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/users?page=-1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "-1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET 5",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/users?page=2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET 6",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/users?page=2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET 7.1",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/users?page=1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET  7.2",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/users?page=2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET  7.3",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/users?page=3",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET  8",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/users/2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET 9",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/users/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET 10",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/users/12",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"12"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET 11",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/users/0",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"0"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET 12",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/users/13",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"13"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET 13",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/users/-1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"-1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET 14",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/{{resourse}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{resourse}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET 15",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/invalidText",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"invalidText"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET 16",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/2022",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"2022"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET 17-18",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/$",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"$"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET 19",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/{{resourse}}/2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{resourse}}",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET 21",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/{{resourse}}/2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{resourse}}",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET 22",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/{{resourse}}/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{resourse}}",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET 23",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/{{resourse}}/0",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{resourse}}",
+										"0"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET 24",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/{{resourse}}/-1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{resourse}}",
+										"-1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET 25",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/users?delay=3",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users"
+									],
+									"query": [
+										{
+											"key": "delay",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "CREATE, UPDATE",
+					"item": [
+						{
+							"name": "ToCheck",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"eve.holt@reqres.in\",\r\n    \"password\": \"cityslicka\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/users",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Check Copy 2",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"first_name\": \"Janet2E\",\r\n        \"last_name\": \"Weaver2E\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/users/1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create 1",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"morpheus\",\r\n    \"job\": \"leader\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/users",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create 2",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"morpheus\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/users",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create 3",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"job\": \"leader\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/users",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create 4",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n     \"name\": \"AddTestUser2022\",\r\n    \"job\": \"PCMaster2022\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/users",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create 5",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n     \"name\": \"AddTestUser2022\",\r\n    \"job\": \"PCMaster2022\",\r\n     \"id\": \"555\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/users",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create 6",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n     \"name\": \"AddTestUser2022\",\r\n    \"job\": \"PCMaster2022\",\r\n     \"Id\": \"555\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/users",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update 7",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"morpheus\",\r\n    \"job\": \"zion resident\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/users/2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update 8",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Editmorpheus\"\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/users/2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update 9",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"job\": \"Editzion resident\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/users/2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update 10",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"morpheus\",\r\n    \"job\": \"zion resident\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/users/2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update 11",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"morpheus\",\r\n    \"job\": \"zion resident\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/users/2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update 12",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Newmorpheus\"\r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/users/2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update 13",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"job\": \"Newzion resident\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/users/2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update 14",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Newmorpheus\"\r\n }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/users/2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update 15",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"NAME\",\r\n    \"job\": \"JOB\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/users/999",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"999"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "DELETE",
+					"item": [
+						{
+							"name": "Delete 1",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/users/2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GETCheckDelete 1",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/users/2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"users",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete 2",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/{{resourse}}/2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{resourse}}",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GETCheckDelete  2",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/{{resourse}}/2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{resourse}}",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete 3",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/{{resourse}}/2022",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{resourse}}",
+										"2022"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GETCheckDelete 3",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/{{resourse}}/2022",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{resourse}}",
+										"2022"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "REGISTER",
+					"item": [
+						{
+							"name": "REGISTER 1",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"eve.holt@reqres.in\",\r\n    \"password\": \"pistol\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{register}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{register}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "REGISTER 2",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"EVE.HOLTT@reqres.in\",\r\n    \"password\": \"pistol\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{register}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{register}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "REGISTER 3",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"1eve.holt@reqres.in\",\r\n    \"password\": \"pisto\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{register}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{register}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "REGISTER 4",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"2eve.holt@reqres.in\",\r\n    \"password\": \"pist\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{register}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{register}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "REGISTER 5",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"3eve.holt@reqres.in\",\r\n    \"password\": \"pis\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{register}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{register}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "REGISTER  6",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"Valid.eve.holt@reqres.in\",\r\n    \"password\": \"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{register}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{register}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "REGISTER 7",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"Vali.eve.holt@reqres.in\",\r\n    \"password\": \"name56\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{register}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{register}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "REGISTER 8",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"Val.eve.holt@reqres.in\",\r\n    \"password\": \"!!me56\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{register}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{register}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "REGISTER 9",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"sydney@fife\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{register}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{register}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "REGISTER 10",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"password\" : \"pistol\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{register}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{register}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "REGISTER  11",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"eve.holt@reqres.in\",\r\n    \"password\": \"pistol\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{register}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{register}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "REGISTER  12",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"sydney@fife\",\r\n    \"password\" : \"pistol\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{register}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{register}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "REGISTER 13",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \".sydney@fife.com\",\r\n    \"password\" : \"pistol\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/{{register}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"{{register}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "LOGIN",
+					"item": []
+				}
+			]
+		}
+	]
+}
