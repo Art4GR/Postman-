@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "80bdb990-1280-4bd4-b505-3b00e8ec514d",
+		"name": "Species App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Single Species",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{Domain}}/node/1702?_format=json",
+					"protocol": "https",
+					"host": [
+						"{{Domain}}"
+					],
+					"path": [
+						"node",
+						"1702"
+					],
+					"query": [
+						{
+							"key": "_format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Single Application",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{Domain}}/node/165?_format=json",
+					"protocol": "https",
+					"host": [
+						"{{Domain}}"
+					],
+					"path": [
+						"node",
+						"165"
+					],
+					"query": [
+						{
+							"key": "_format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Single Supplier",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{Domain}}/node/18731?_format=json",
+					"protocol": "https",
+					"host": [
+						"{{Domain}}"
+					],
+					"path": [
+						"node",
+						"18731"
+					],
+					"query": [
+						{
+							"key": "_format",
+							"value": "json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Species",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{Domain}}/api/species/search",
+					"protocol": "https",
+					"host": [
+						"{{Domain}}"
+					],
+					"path": [
+						"api",
+						"species",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CHECK Search Species",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://{{Domain}}/api/species/search",
+					"protocol": "https",
+					"host": [
+						"{{Domain}}"
+					],
+					"path": [
+						"api",
+						"species",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Applications",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{Domain}}/api/applications/search",
+					"protocol": "https",
+					"host": [
+						"{{Domain}}"
+					],
+					"path": [
+						"api",
+						"applications",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Suppliers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://{{Domain}}/api/suppliers/search",
+					"protocol": "https",
+					"host": [
+						"{{Domain}}"
+					],
+					"path": [
+						"api",
+						"suppliers",
+						"search"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Domain",
+			"value": "dev.ws.au1.ironstar.io/"
+		}
+	]
+}
