@@ -1,0 +1,472 @@
+{
+	"info": {
+		"_postman_id": "5db3fd87-ccae-4a14-96a2-cf35f467ac2d",
+		"name": "ArtsiomB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. Pet with autoriz",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "api_key",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "8888",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 8888,\r\n  \"name\": \"DoggiePiesNEW\",\r\n  \"category\": {\r\n    \"id\": 1,\r\n    \"name\": \"DoggiePies\"\r\n  },\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_Pet1",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}8888",
+					"host": [
+						"{{url}}8888"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. Pet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 8889,\r\n  \"name\": \"DoggiePiesBIG\",\r\n  \"category\": {\r\n    \"id\": 1,\r\n    \"name\": \"DogsBIG\"\r\n  },\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_Pet2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}8889",
+					"host": [
+						"{{url}}8889"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. Pet without status",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 8890,\r\n  \"name\": \"DoggiePiesAngry\",\r\n  \"category\": {\r\n    \"id\": 1,\r\n    \"name\": \"DogsMartin\"\r\n  },\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ]\r\n \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_Pet3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}8890",
+					"host": [
+						"{{url}}8890"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. Pet with \"ERROR\" status",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 8891,\r\n  \"name\": \"DoggiePies891\",\r\n  \"category\": {\r\n    \"id\": 1,\r\n    \"name\": \"DoggiePies891\"\r\n  },\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"ERROR\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_Pet4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}8891",
+					"host": [
+						"{{url}}8891"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_Pet4_with ERROR status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}findByStatus?status=ERROR",
+					"host": [
+						"{{url}}findByStatus"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "ERROR"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. Pet with Negative category id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 8892,\r\n  \"name\": \"DoggiePiesAngry\",\r\n  \"category\": {\r\n    \"id\": -9999,\r\n    \"name\": \"DoggiePiesAngry\"\r\n  },\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_Pet5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}8892",
+					"host": [
+						"{{url}}8892"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6. Pet with '0' category id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 8893,\r\n  \"name\": \"Doggie8893\",\r\n  \"category\": {\r\n    \"id\": 0,\r\n    \"name\": \"Doggie8893\"\r\n  },\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_Pet6",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}8892",
+					"host": [
+						"{{url}}8892"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7. Pet with OLD id & NEW name",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 8888,\r\n  \"name\": \"DoggiePiesNEW\",\r\n  \"category\": {\r\n    \"id\": 1,\r\n    \"name\": \"DoggiePies\"\r\n  },\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_Pet7",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}8888",
+					"host": [
+						"{{url}}8888"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8. Edit pet name",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 8888,\r\n  \"name\": \"PUT-DOG\",\r\n  \"category\": {\r\n    \"id\": 1,\r\n    \"name\": \"PUT-DOG\"\r\n  },\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_Pet8",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}8888",
+					"host": [
+						"{{url}}8888"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "9. Find pet by tag",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}findByTags?tags=string",
+					"host": [
+						"{{url}}findByTags"
+					],
+					"query": [
+						{
+							"key": "tags",
+							"value": "string"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "10. Delete pet",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}8889",
+					"host": [
+						"{{url}}8889"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_DelPet10",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}8889",
+					"host": [
+						"{{url}}8889"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "11. Delete pet use api key",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}8890?api_key=8888",
+					"host": [
+						"{{url}}8890"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "8888"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_DelPet11",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}8890",
+					"host": [
+						"{{url}}8890"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://petstore3.swagger.io/api/v3/pet/"
+		}
+	]
+}
